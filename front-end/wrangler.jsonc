@@ -1,0 +1,11 @@
+// Cloudflare Workers config: serves the Vite build (dist/) as static assets.
+// "name" must match the Worker's name in the Cloudflare dashboard.
+{
+  "name": "zovioo-website",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Send unknown paths (e.g. /admin, /checkout/RM-201) to index.html so React Router handles them.
+    "not_found_handling": "single-page-application"
+  }
+}
