@@ -2,24 +2,26 @@
 
 Responsive hotel website and management dashboard prototype for **zovioo.in**.
 
-## Run the mockup
+## Run the front-end
 
-The prototype is static HTML, CSS and JavaScript. It stores demo changes in this browser using `localStorage`.
+The front-end is a React + Vite app in `front-end/`. It stores demo changes in the browser using `localStorage`. Requires Node.js 18+.
 
-1. Open a terminal in this folder.
-2. Run `python -m http.server 8080` (or use another local static file server).
-3. Visit `http://localhost:8080`.
+```bash
+cd front-end
+npm install
+npm run dev        # http://localhost:5173
+```
 
-The mockup can also be previewed from `index.html`, although using a local server is recommended.
+See `front-end/README.md` for the component structure and routes.
 
 ## Project structure
 
 ```text
-zovioo-hotel-website/
-├── index.html                 # Guest site entry point
-├── assets/
-│   ├── css/styles.css         # Responsive guest and admin styles
-│   └── js/app.js              # Guest flows, admin views, demo storage
+zovioo-website/
+├── front-end/                 # React + Vite app (guest site + admin demo)
+│   ├── index.html
+│   ├── package.json
+│   └── src/                   # pages, admin, components, forms, context, styles
 ├── backend/
 │   └── README.md              # Proposed API service structure
 ├── database/
